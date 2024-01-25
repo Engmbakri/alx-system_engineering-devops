@@ -6,6 +6,6 @@ for file in *; do
     if [ -f "$file" ] && [ "${file:0:1}" != "." ]; then
         display_name=$(echo "$file" | cut -d'-' -f2-)
 
-        stat --printf="%A %6s %y %n\n" "$file" | sed -e "s|$(pwd)/||" -e "s|$file|$display_name|"
+  	echo "$display_name"
     fi
 done
