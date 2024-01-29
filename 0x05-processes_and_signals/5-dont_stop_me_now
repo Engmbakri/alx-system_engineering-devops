@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Bash script that stops 4-to_infinity_and_beyond process.
+
+# Run the infinite loop script in the background
+./4-to_infinity_and_beyond &
+
+# Save the PID of the background process
+pid=$!
+
+# Wait for a moment
+sleep 5
+
+# Use kill to stop the process
+kill "$pid"
